@@ -12,6 +12,7 @@
               UserForm.userPassword();
               UserForm.upperCasePassword();
               UserForm.atleast1numPassword();
+              UserForm.atleast1SpecialSymbol();
         }
     }
 }
