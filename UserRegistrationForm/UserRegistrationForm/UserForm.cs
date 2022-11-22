@@ -65,7 +65,7 @@ namespace UserRegistrationForm
             Console.WriteLine("Enter mobole number : ");
             long userNumber = Convert.ToInt64(Console.ReadLine());
              
-            Regex mob = new Regex(@"[6-9]{1}[0-9]{9}");
+            Regex mob = new Regex(@"[6-9][0-9]{9}");
             bool mobileNum = mob.IsMatch(userNumber.ToString());
             if (mobileNum)
             {
@@ -94,7 +94,22 @@ namespace UserRegistrationForm
             {
                 Console.WriteLine($"Invalide Password : {password}");
             }
+        }
+        public static void upperCasePassword()
+        {
+            Console.WriteLine("Enter Password Atleast one character should uppercase : ");
+            string password = Console.ReadLine();
 
+            Regex upperCase = new Regex(@"(?=.*[A-Za-z])[a-zA-Z]{8,35}");
+            bool oneCharUpper = upperCase.IsMatch(password);
+            if (oneCharUpper)
+            {
+                Console.WriteLine($"Valid uppercase Password : {password}");
+            }
+            else
+            {
+                Console.WriteLine($"Invalid uppercase Password : {password}");
+            }
         }
     }
 }

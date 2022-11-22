@@ -6,10 +6,11 @@
         {
             Console.WriteLine("============= WELCOME TO USER REGISTRTION FORM ===================");
 
-          //  UserForm.userForm();
-            //UserForm.userEmail();
-            //UserForm.userMobile();
-            UserForm.userPassword();
+              UserForm.userForm();
+              UserForm.userEmail();
+              UserForm.userMobile();
+              UserForm.userPassword();
+              UserForm.upperCasePassword();
         }
     }
 }
