@@ -59,5 +59,23 @@ namespace UserRegistrationForm
                 Console.WriteLine("Invalide email address.");
             }
         }
+
+        public static void userMobile()
+        {
+            Console.WriteLine("Enter mobole number : ");
+            long userNumber = Convert.ToInt64(Console.ReadLine());
+             
+            Regex mob = new Regex(@"[6-9]{1}[0-9]{9}");
+            bool mobileNum = mob.IsMatch(userNumber.ToString());
+            if (mobileNum)
+            {
+                Console.WriteLine("Valide Mobile number : " + userNumber);    
+            }
+            else
+            {
+                Console.WriteLine("Invalide Mobile number : " + userNumber);
+
+            }
+        }
     }
 }
