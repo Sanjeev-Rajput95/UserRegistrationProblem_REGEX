@@ -77,5 +77,24 @@ namespace UserRegistrationForm
 
             }
         }
+
+        public static void userPassword()
+        {
+            Console.WriteLine("Enter Password  : ");
+            string password = Console.ReadLine();
+            
+            Regex userPassword = new Regex(@"^[a-z A-Z]{8}");
+
+            bool userPasswordResult = userPassword.IsMatch(password);
+            if (userPasswordResult)
+            {
+                Console.WriteLine($"Valid Password : {password}");
+            }
+            else
+            {
+                Console.WriteLine($"Invalide Password : {password}");
+            }
+
+        }
     }
 }
