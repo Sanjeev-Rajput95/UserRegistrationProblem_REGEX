@@ -11,6 +11,7 @@
               UserForm.userMobile();
               UserForm.userPassword();
               UserForm.upperCasePassword();
+              UserForm.atleast1numPassword();
         }
     }
 }

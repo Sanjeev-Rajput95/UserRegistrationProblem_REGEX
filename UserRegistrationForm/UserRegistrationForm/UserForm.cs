@@ -111,5 +111,21 @@ namespace UserRegistrationForm
                 Console.WriteLine($"Invalid uppercase Password : {password}");
             }
         }
+        public static void atleast1numPassword()
+        {
+            Console.WriteLine("Enter Password Atleast 1 uppercase character  and 1 number  : ");
+            string password = Console.ReadLine();
+
+            Regex upperCase = new Regex(@"""(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9]{8,30}");
+            bool oneCharUpper = upperCase.IsMatch(password);
+            if (oneCharUpper)
+            {
+                Console.WriteLine($"Valid 1 char uppercase & 1 number Password : {password}");
+            }
+            else
+            {
+                Console.WriteLine($"Invalid 1 char uppercase & 1 number Password : {password}");
+            }
+        }
     }
 }
